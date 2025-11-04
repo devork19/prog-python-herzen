@@ -134,7 +134,7 @@ class TestFactorials(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 Результаты и выводы
-[![image.png](https://i.postimg.cc/xTLn8bdT/image.png)](https://postimg.cc/XpNTDqFT)
+[График[image.png](https://i.postimg.cc/xTLn8bdT/image.png)](https://postimg.cc/XpNTDqFT)
 
 На графике видно, что:
 
