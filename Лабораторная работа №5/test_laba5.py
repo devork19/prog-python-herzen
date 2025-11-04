@@ -1,4 +1,3 @@
-# tests.py
 import unittest
 import math
 import sys
@@ -11,7 +10,6 @@ class TestFactorials(unittest.TestCase):
         """
         Сбрасываем кэши перед каждым тестом
         """
-        # Импортируем глобальные словари для мемоизации и очищаем их
         from laba5 import memo_rec, memo_it
         memo_rec.clear()
         memo_it.clear()
@@ -114,7 +112,6 @@ if __name__ == '__main__':
     else:
         print("\n Некоторые тесты не прошли")
 
-    # Демонстрация работы всех методов
     print(f"\nПроверка вычисления 10! разными методами:")
     print(f"math.factorial(10) = {math.factorial(10)}")
     print(f"fact_recursive(10) = {fact_recursive(10)}")
