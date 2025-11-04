@@ -134,7 +134,7 @@ class TestFactorials(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 Результаты и выводы
-![График сравнения времени вычисления факториала](graph.png)
+![График](images/graph.png)
 
 На графике видно, что:
 
