@@ -135,7 +135,7 @@ if __name__ == '__main__':
     unittest.main()
 ## Результаты и выводы
 
-![График сравнения времени вычисления факториала](graph.png)
+[![graph.png](https://i.postimg.cc/mDmNR5C5/graph.png)](https://postimg.cc/ygSSynfm)
 
 На графике видно, что:
 
