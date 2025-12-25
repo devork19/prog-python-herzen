@@ -30,25 +30,26 @@
 Проект организован в соответствии с паттерном MVC:
 
 lab_python/
-├── controllers/ # Контроллеры (Логика обработки запросов)
-│ ├── app_controller.py # Главная страница и страница автора
-│ ├── user_controller.py # Список пользователей и детальная страница
-│ └── currency_controller.py # Список валют
-├── models/ # Модели (Данные)
-│ ├── app.py
-│ ├── author.py
-│ ├── user.py
-│ ├── currency.py
-│ └── ...
-├── templates/ # Представления (HTML-шаблоны Jinja2)
-│ ├── base.html # Базовый шаблон (меню, футер)
-│ ├── index.html
-│ ├── users.html
-│ ├── user_detail.html # Страница с графиками
-│ └── currencies.html
-├── utils/ # Утилиты
-│ └── currencies_api.py # Парсинг XML с сайта ЦБ РФ
-└── myapp.py # Точка входа (Запуск сервера и маршрутизация)
+├── controllers/            # Контроллеры (Логика обработки запросов)
+│   ├── app_controller.py   # Главная страница и страница автора
+│   ├── user_controller.py  # Список пользователей и детальная страница
+│   └── currency_controller.py # Список валют
+├── models/                 # Модели (Данные)
+│   ├── app.py
+│   ├── author.py
+│   ├── user.py
+│   ├── currency.py
+│   └── ...
+├── templates/              # Представления (HTML-шаблоны Jinja2)
+│   ├── base.html           # Базовый шаблон (меню, футер)
+│   ├── index.html
+│   ├── users.html
+│   ├── user_detail.html    # Страница с графиками
+│   └── currencies.html
+├── utils/                  # Утилиты
+│   └── currencies_api.py   # Парсинг XML с сайта ЦБ РФ
+└── myapp.py                # Точка входа (Запуск сервера и маршрутизация)
+
 
 text
 
