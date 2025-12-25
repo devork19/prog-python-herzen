@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Актуальные курсы валют (ЦБ РФ)</h2>
+<button class="btn btn-sm btn-outline-secondary mb-3" onclick="location.reload()">Обновить</button>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Код</th>
+            <th>Валюта</th>
+            <th>Номинал</th>
+            <th>Курс (RUB)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for curr in currencies %}
+        <tr>
+            <td><strong>{{ curr.char_code }}</strong></td>
+            <td>{{ curr.name }}</td>
+            <td>{{ curr.nominal }}</td>
+            <td>{{ curr.value }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

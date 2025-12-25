@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Добро пожаловать в {{ app.name }}!</h1>
+    <p class="lead">Версия приложения: {{ app.version }}</p>
+    <hr class="my-4">
+    
+    {% if show_author %}
+        <div class="alert alert-info">
+            <h4>Информация об авторе</h4>
+            <p><strong>Студент:</strong> {{ app.author.name }}</p>
+            <p><strong>Группа:</strong> {{ app.author.group }}</p>
+        </div>
+    {% else %}
+        <p>Это простое приложение для отслеживания курсов валют, написанное на Python без фреймворков.</p>
+        <a class="btn btn-primary btn-lg" href="/currencies" role="button">Смотреть курсы</a>
+    {% endif %}
+</div>
+{% endblock %}

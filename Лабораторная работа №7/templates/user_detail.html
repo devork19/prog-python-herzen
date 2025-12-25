@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Профиль: {{ user.name }}</h2>
+<a href="/users" class="btn btn-secondary btn-sm mb-4">Назад</a>
+
+<h3>Подписки и статистика</h3>
+<p class="text-muted">Графики изменений за последние 3 месяца (Самостоятельная работа)</p>
+
+<div class="row">
+    {% for chart in charts %}
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-header">
+                Динамика {{ chart.code }}
+            </div>
+            <div class="card-body">
+                <canvas id="chart-{{ loop.index }}"></canvas>
+            </div>
+        </div>
+        <script>
+            new Chart(document.getElementById('chart-{{ loop.index }}'), {
+                type: 'line',
+                data: {
+                    labels: {{ chart.labels | safe }},
+                    datasets: [{
+                        label: 'Курс {{ chart.code }}',
+                        data: {{ chart.data | safe }},
+                        borderColor: 'rgb(75, 192, 192)',
+                        tension: 0.1
+                    }]
+                }
+            });
+        </script>
+    </div>
+    {% endfor %}
+    
+    {% if not charts %}
+    <div class="col">
+        <div class="alert alert-warning">У пользователя нет подписок.</div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

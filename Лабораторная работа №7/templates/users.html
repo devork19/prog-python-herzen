@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Список пользователей</h2>
+<div class="list-group mt-3">
+    {% for user in users %}
+        <a href="/user?id={{ user.id }}" class="list-group-item list-group-item-action">
+            {{ user.name }} (ID: {{ user.id }})
+        </a>
+    {% endfor %}
+</div>
+{% endblock %}
